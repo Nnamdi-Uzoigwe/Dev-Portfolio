@@ -40,7 +40,7 @@ export default function Hero() {
           className=" font-semibold flex gap-2"
           style={{ fontFamily: "var(--font-jetbrains)" }}
         >
-          <MdLocationPin size={28} className="text-[#84cc16]" />
+          <MdLocationPin size={28} className="text-[#14b8a6]" />
           Abuja, Nigeria
         </div>
       </div>

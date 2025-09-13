@@ -37,11 +37,11 @@ export default function AboutMe() {
           </p>
 
           <div className="cards mt-8 flex gap-3 items-center w-full">
-            <div className="border-1 w-full font-semibold border-gray-300 hover:bg-[#8687e7] hover:text-white hover:border-0 transform transition-transform hover:scale-[1.1] duration-200  shadow-sm  p-6 rounded-[10px] flex flex-col items-center">
+            <div className="border-1 w-full font-semibold border-gray-300 hover:bg-[#8687e7] hover:text-white hover:border-0 transform transition-transform hover:scale-[1.1] duration-200  shadow-sm  p-4 lg:p-6 rounded-[10px] flex flex-col items-center">
               20+
               <span className="font-light text-sm lg:text-md">Projects </span>
             </div>
-            <div className="border-1 border-gray-300 hover:bg-[#8687e7] hover:text-white hover:border-0 transform transition-transform hover:scale-[1.1] duration-200 shadow-sm font-semibold w-full p-6 rounded-[10px] flex flex-col items-center">
+            <div className="border-1 border-gray-300 hover:bg-[#8687e7] hover:text-white hover:border-0 transform transition-transform hover:scale-[1.1] duration-200 shadow-sm font-semibold w-full p-4 lg:p-6 rounded-[10px] flex flex-col items-center">
               3+
               <span className="font-light text-sm lg:text-md">Years Experience</span>
             </div>
