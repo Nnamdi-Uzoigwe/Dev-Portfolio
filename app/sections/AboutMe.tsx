@@ -12,9 +12,9 @@ export default function AboutMe() {
         <div>
           <p className="text-left lg:text-justify">
             Hi, I am Nnamdi, a passionate Frontend Developer with full-stack
-            capabilities. While I'm comfortable across the entire MERN stack, my
+            capabilities. While I&apos;m comfortable across the entire MERN stack, my
             heart truly lies in crafting beautiful, interactive user
-            experiences. There's something magical about transforming designs
+            experiences. There&apos;s something magical about transforming designs
             into pixel-perfect, responsive interfaces that users love to
             interact with. <br />
             <br />
@@ -28,11 +28,11 @@ export default function AboutMe() {
             problem-solving. I believe great frontend development is where art
             meets science - balancing performance optimization with stunning
             visual design, ensuring accessibility while pushing the boundaries
-            of what's possible in the browser. <br />
+            of what&apos;s possible in the browser. <br />
             <br />
             When I am not coding, you will find me watching football matches or
-            diving deep into old-school music playlists. There's something about
-            classic tracks that inspires my coding sessions - maybe it's the
+            diving deep into old-school music playlists. There&apos;s something about
+            classic tracks that inspires my coding sessions - maybe it&apos;s the
             timeless quality that I try to bring to my development work.
           </p>
 
