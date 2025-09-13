@@ -15,15 +15,15 @@ export default function Navbar() {
       
       {/* Nav Links */}
       <div className="hidden md:flex space-x-8">
-        <a href="#about" className="text-white hover:text-[#78716c]">About</a>
+        <a href="#about" className="text-white hover:text-[#78716c]">About Me</a>
+        <a href="#skills" className="text-white hover:text-[#78716c]">My Skills</a>
         <a href="#work" className="text-white hover:text-[#78716c]">Work</a>
-        <a href="#skills" className="text-white hover:text-[#78716c]">Skills</a>
         <a href="#contact" className="text-white hover:text-[#78716c]">Contact</a>
       </div>
       
       {/* CTA */}
       <button className="bg-[#8687e7] text-white px-12 py-2 hover:bg-[#ff6347] rounded-[10px]">
-        Hire Me
+        Download CV
       </button>
     </div>
   </div>

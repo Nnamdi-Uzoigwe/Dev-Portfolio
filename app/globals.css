@@ -43,18 +43,7 @@ body {
             background-position: -1px -1px;
         }
 
-         .gradient-border {
-            padding: 5px;
-            background: linear-gradient(135deg, #8b5cf6, #ec4899, #14b8a6);
-            border-radius: 20px;
-        }
-
-        .gradient-inner {
-            background: #2a2a2a;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
+         
 
         .double-frame {
             position: relative;

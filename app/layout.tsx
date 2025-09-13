@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.className} ${jetbrainsMono.variable} bg-[#fff]`}>
       <body
-        className={`${poppins.className} px-6 lg:px-32  antialiased bg-[#fff] text-gray-700`}
+        className={`${poppins.className}   antialiased bg-[#fff] text-gray-700`}
       >
         <Navbar />
         {children}
