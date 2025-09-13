@@ -11,7 +11,7 @@ export default function AboutMe() {
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div>
           <p className="text-left lg:text-justify">
-            Hi, I'm Nnamdi, a passionate Frontend Developer with full-stack
+            Hi, I am Nnamdi, a passionate Frontend Developer with full-stack
             capabilities. While I'm comfortable across the entire MERN stack, my
             heart truly lies in crafting beautiful, interactive user
             experiences. There's something magical about transforming designs
@@ -30,7 +30,7 @@ export default function AboutMe() {
             visual design, ensuring accessibility while pushing the boundaries
             of what's possible in the browser. <br />
             <br />
-            When I'm not coding, you'll find me watching football matches or
+            When I am not coding, you will find me watching football matches or
             diving deep into old-school music playlists. There's something about
             classic tracks that inspires my coding sessions - maybe it's the
             timeless quality that I try to bring to my development work.
