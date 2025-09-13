@@ -130,7 +130,7 @@ export default function Skills() {
 
     <div className="flex gap-6 flex-wrap justify-center">
     {skillData.map((item) => (
-        <div key={item.id} className="h-24 w-24 rounded-full shadow-sm  bg-white flex items-center justify-center">
+        <div key={item.id} className="h-24 w-24 rounded-[10px] shadow-sm bg-white flex items-center justify-center">
           
         <Image 
             src={item.src}
@@ -138,7 +138,7 @@ export default function Skills() {
             width={50}
             alt={item.altText}
             />
-      </div>
+       </div>
     ))}
     </div>
     </div>

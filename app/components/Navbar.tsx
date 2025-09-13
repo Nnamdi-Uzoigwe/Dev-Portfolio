@@ -1,3 +1,5 @@
+import { HiMenuAlt3 } from "react-icons/hi";
+
 export default function Navbar() {
     return (
         // <div className="fixed top-5 bg-[#1a1a1a]/80 w-[80%] rounded-[12px] z-30 border-1 py-[16px] px-[32px] h-[80px] border-[#fff]/10">
@@ -22,9 +24,13 @@ export default function Navbar() {
       </div>
       
       {/* CTA */}
-      <button className="bg-[#8687e7] text-white px-12 py-2 hover:bg-[#ff6347] rounded-[10px]">
+      <button className="hidden lg:flex bg-[#8687e7] text-white px-12 py-2 hover:bg-[#ff6347] rounded-[10px]">
         Download CV
       </button>
+
+      <div className="flex lg:hidden bg-[#8687e7] cursor-pointer text-white p-2 rounded-[10px]">
+        <HiMenuAlt3 size={28} />
+      </div>
     </div>
   </div>
 </nav>
