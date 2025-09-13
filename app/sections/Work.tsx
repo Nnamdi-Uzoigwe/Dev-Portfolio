@@ -118,8 +118,9 @@ export default function Work() {
         if (!res.ok) throw new Error("Failed to fetch projects");
         const data = await res.json();
         setProjects(data);
-      } catch (err: any) {
-        setError(err.message || "Something went wrong");
+      } catch (err: unknown) {
+        const error = err as Error;
+        setError(error.message || "Something went wrong");
       }
     };
     fetchProjects();
