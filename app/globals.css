@@ -63,6 +63,13 @@ body {
             border-radius: 16px;
         }
 
+        
+@media (max-width: 768px) {
+  #contact {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 
 /* 

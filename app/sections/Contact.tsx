@@ -2,7 +2,7 @@ import { IoIosSend } from "react-icons/io";
 
 export default function Contact() {
     return (
-        <div className="fade-section bg-gray-100 py-20 px-6 lg:px-52 flex flex-col items-center gap-2">
+        <div id="contact" className="fade-section bg-gray-100 py-20 px-6 lg:px-52 flex flex-col items-center gap-2">
             <h4 className="text-2xl font-semibold text-center">
                 Contact <span className="text-[#8687e7]">Me</span>
             </h4>

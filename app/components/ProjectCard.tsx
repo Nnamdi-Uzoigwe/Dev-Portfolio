@@ -41,7 +41,10 @@ export const ProjectCard = ({ name, overview, brief, tools, image }:projectCardP
                   {tools?.map((tool, index) => (
                     <div
                       key={index}
-                      className="mt-4 p-2 bg-[#d8d5d5] text-[#737373] font-semibold rounded-[20px] text-sm"
+                      className="mt-4 p-2 bg-[#dfdedf] text-[#737373] font-semibold rounded-[20px] text-xs lg:text-sm"
+                      style={
+                        {fontFamily: "var(--font-jetbrains)"}
+                      }
                     >
                       {tool}
                     </div>
