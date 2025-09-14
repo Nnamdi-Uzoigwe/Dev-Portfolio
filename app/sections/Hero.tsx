@@ -5,7 +5,7 @@ import { PiLineVerticalBold } from "react-icons/pi";
 
 export default function Hero() {
   return (
-    <div className="fade-section grid-dots px-6 lg:px-52 pt-30 flex flex-col justify-center h-auto min-h-screen items-center">
+    <div id="hero" className="fade-section grid-dots px-6 lg:px-52 pt-30 flex flex-col justify-center h-auto min-h-screen items-center">
       <h1 className="text-[30px] lg:text-[50px] font-semibold text-center">
         Hey, I am <span className="text-[#8687e7]">Nnamdi Uzoigwe</span>
       </h1>

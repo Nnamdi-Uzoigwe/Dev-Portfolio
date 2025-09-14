@@ -2,9 +2,7 @@
 
 
 body {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
-  overscroll-behavior: none; 
+  scroll-behavior: smooth!important;
 }
 
 .hero-grid-bg {
@@ -72,6 +70,7 @@ body {
     transition-duration: 0s !important;
   }
 }
+
 
 /* 
 deep charcoal - #1a1a1a or #212121

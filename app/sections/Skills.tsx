@@ -117,7 +117,7 @@ export default function Skills() {
         },
     ]
   return (
-    <div className="fade-section py-20 px-6 lg:px-52 bg-gray-100 flex flex-col items-center">
+    <div id="skills" className="fade-section py-20 px-6 lg:px-52 bg-gray-100 flex flex-col items-center">
       <h4 className="text-2xl font-semibold text-center">
         My <span className="text-[#8687e7]">Skills</span>
       </h4>

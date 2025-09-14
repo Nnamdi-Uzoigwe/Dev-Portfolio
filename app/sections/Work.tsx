@@ -1,7 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Spinner } from "../components/Spinner";
+import { ProjectCard } from "../components/ProjectCard";
+import Link from "next/link";
 
 interface ProjectImage {
   url: string;
@@ -24,10 +26,12 @@ interface Project {
 export default function Work() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
+        setLoading(true);
         const res = await fetch(
           "https://nnamdi-portfolio-site.onrender.com/api/projects"
         );
@@ -37,67 +41,45 @@ export default function Work() {
       } catch (err: unknown) {
         const error = err as Error;
         setError(error.message || "Something went wrong");
+      } finally {
+        setLoading(false);
       }
     };
     fetchProjects();
   }, []);
 
-
-
-
-  function truncateWords(text: string, numWords: number) {
-  if (!text) return "";
-  const words = text.split(" ");
-  return words.slice(0, numWords).join(" ") + (words.length > numWords ? "…" : "");
-}
-
-
   return (
-    <div className="py-20 px-6 lg:px-52">
-      <h4 className="font-semibold text-2xl text-center mb-4">My <span className="text-[#8687e7]">Portfolio</span></h4>
+    <div id="work" className="py-20 px-6 lg:px-52">
+      <h4 className="font-semibold text-2xl text-center mb-4">
+        My <span className="text-[#8687e7]">Portfolio</span>
+      </h4>
       <p className="text-center mb-16">
         Below are some of the noteworthy projects I have worked on
       </p>
-      {error && <p className="text-red-500">{error}</p>}
-      <div className="flex flex-col gap-6">
-        {projects.map((item) => (
-          <div
-            key={item.id}
-            className=" rounded-[12px] w-full h-auto overflow-hidden transform transition duration-300 hover:-skew-y-1 bg-gray-50 shadow-sm grid grid-cols-1 lg:grid-cols-2"
-          >
-            <div className="relative w-full h-[300px] lg:h-auto">
-              <Image
-                src={item.images[0].url}
-                fill
-                className="object-cover"
-                alt="portfolio img"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="flex flex-col p-6 justify-center  border-b-2 lg:border-b-0 border-l-0 lg:border-l-2 border-gray-200">
-              <p className="text-center font-semibold text-lg lg:text-3xl mb-2 text-[#8687e7]">{item.name}</p>
-              <p className="text-center">{item.brief}</p>
+      
+      {error && <p className="text-red-500 text-center">{error}</p>}
+      
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="flex flex-col gap-6">
+          {projects.map((item) => (
+            <ProjectCard 
+              key={item.id}
+              name={item.name}
+              brief={item.brief}
+              overview={item.overview}
+              image={item.images[0].url}
+              tools={item.tools}
+            />
+          ))}
+        </div>
+      )}
 
-              <div className="flex flex-wrap gap-2 mb-8 justify-center">
-                {item.tools?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="mt-4 p-2 bg-[#d8d5d5] text-[#737373] font-semibold rounded-[20px] text-sm"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <p>{truncateWords(item.overview, 20)}</p>
-
-            <div className="flex justify-center">
-              <button className="mt-4 w-fit bg-[#8687e7] text-white py-2 px-8 rounded-xl">Read More</button>
-            </div>
-            </div>
-
-          </div>
-        ))}
+      <div className="mt-18 flex justify-center">
+        <Link href="https://github.com/Nnamdi-Uzoigwe" target="_blank">
+          <button className="bg-[#8687e7] hover:bg-[#6e70ca] text-white py-4 cursor-pointer px-12 rounded-[10px]">View More Projects</button>
+        </Link>
       </div>
     </div>
   );

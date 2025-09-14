@@ -7,6 +7,7 @@ import Work from "./sections/Work";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Contact from "./sections/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,6 +74,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Work />
+      <Contact />
     </div>
   );
 }
