@@ -64,13 +64,6 @@ body {
         }
 
 
-        @media (max-width: 768px) {
-  * {
-    animation-duration: 0s !important;
-    transition-duration: 0s !important;
-  }
-}
-
 
 /* 
 deep charcoal - #1a1a1a or #212121

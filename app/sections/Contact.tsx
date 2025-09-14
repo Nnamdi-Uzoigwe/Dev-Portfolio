@@ -13,7 +13,7 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
                 <p>Hi</p>
-                <form className="bg-white p-4 w-full flex flex-col gap-6">
+                <form className="bg-white px-4 py-10 shadow-sm rounded-[14px] w-full flex flex-col gap-6">
                     <div>
                         <p className="font-semibold">Your Name</p>
                         <input type="text" placeholder="Johnson" className="border-1 w-full p-2 rounded-[8px]"/>
