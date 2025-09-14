@@ -53,7 +53,7 @@ export default function Work() {
 
 
   return (
-    <div className="fade-section py-20 px-6 lg:px-52">
+    <div className="py-20 px-6 lg:px-52">
       <h4 className="font-semibold text-2xl text-center mb-4">My <span className="text-[#8687e7]">Portfolio</span></h4>
       <p className="text-center mb-16">
         Below are some of the noteworthy projects I have worked on
@@ -71,6 +71,7 @@ export default function Work() {
                 fill
                 className="object-cover"
                 alt="portfolio img"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="flex flex-col p-6 justify-center  border-b-2 lg:border-b-0 border-l-0 lg:border-l-2 border-gray-200">
