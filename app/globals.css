@@ -3,6 +3,8 @@
 
 body {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+  overscroll-behavior: none; 
 }
 
 .hero-grid-bg {
