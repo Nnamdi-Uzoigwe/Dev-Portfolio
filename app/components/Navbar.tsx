@@ -82,9 +82,76 @@ import { HiMenuAlt3 } from "react-icons/hi";
 export default function Navbar() {
   const progressRef = useRef<HTMLDivElement | null>(null);
 
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   if (!progressRef.current) return;
+
+  //   // start the bar at scaleX(0)
+  //   gsap.set(progressRef.current, {
+  //     scaleX: 0,
+  //     transformOrigin: "left center",
+  //   });
+
+  //   // Use a more dynamic approach that recalculates on every update
+  //   const st = ScrollTrigger.create({
+  //     trigger: "body",
+  //     start: "top top",
+  //     end: "bottom bottom",
+  //     scrub: true,
+  //     onUpdate: (self) => {
+  //       gsap.to(progressRef.current, {
+  //         scaleX: self.progress,
+  //         ease: "none",
+  //         overwrite: true,
+  //       });
+  //     },
+  //   });
+
+  //   // Multiple refresh triggers to handle dynamic content
+  //   const refreshScrollTrigger = () => {
+  //     setTimeout(() => {
+  //       ScrollTrigger.refresh();
+  //     }, 100);
+  //   };
+
+  //   // Refresh when images load
+  //   window.addEventListener("load", refreshScrollTrigger);
+    
+  //   // Refresh when resize happens
+  //   window.addEventListener("resize", refreshScrollTrigger);
+
+  //   // Refresh after a delay to catch any late-loading content
+  //   const timeoutId = setTimeout(refreshScrollTrigger, 2000);
+
+  //   // Also refresh when DOM changes (for dynamic content)
+  //   const observer = new MutationObserver(() => {
+  //     refreshScrollTrigger();
+  //   });
+
+  //   observer.observe(document.body, {
+  //     childList: true,
+  //     subtree: true,
+  //     attributes: false
+  //   });
+
+  //   return () => {
+  //     st.kill();
+  //     clearTimeout(timeoutId);
+  //     observer.disconnect();
+  //     window.removeEventListener("load", refreshScrollTrigger);
+  //     window.removeEventListener("resize", refreshScrollTrigger);
+  //   };
+  // }, []);
+
+
+  
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (!progressRef.current) return;
+
+    // Only run on desktop screens (768px and above)
+    const isDesktop = window.innerWidth >= 768;
+    if (!isDesktop) return;
 
     // start the bar at scaleX(0)
     gsap.set(progressRef.current, {
@@ -176,7 +243,7 @@ export default function Navbar() {
         </div>
       </div>
       {/* progress bar */}
-      <div className="fixed top-0 left-0 h-1 w-full bg-gray-200">
+      <div className="fixed top-0 left-0 h-1 w-full bg-gray-200 hidden md:block">
         <div
           ref={progressRef}
           className="h-full bg-[#14b8a6]"
