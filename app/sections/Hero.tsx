@@ -10,7 +10,7 @@ export default function Hero() {
         Hey, I am <span className="text-[#8687e7]">Nnamdi Uzoigwe</span>
       </h1>
       <p className="mt-2 mb-10 text-2xl font-semibold text-center">
-        Website & Mobile App Developer
+        A Website & Mobile App Developer
       </p>
       <p className="text-center w-full lg:w-[60%] text-gray-600">
         I am passionate about crafting digital experiences that solve real
@@ -25,9 +25,6 @@ export default function Hero() {
           </div>
           <div>
             <FaXTwitter size={28} />
-          </div>
-          <div>
-            <MdOutlineMail size={28} />
           </div>
           <div>
             <FaLinkedin size={28} />
