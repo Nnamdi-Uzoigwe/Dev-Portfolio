@@ -4,7 +4,7 @@ import contactImg from "../../public/contactimg.png"
 
 export default function Contact() {
     return (
-        <div id="contact" className="fade-section bg-gray-100 py-20 px-6 lg:px-52 flex flex-col items-center gap-2">
+        <div id="contact" className="fade-section bg-white border-t-2 border-gray-300 py-20 px-6 lg:px-52 flex flex-col items-center gap-2">
             <h4 className="text-2xl font-semibold text-center">
                 Contact <span className="text-[#8687e7]">Me</span>
             </h4>
@@ -22,7 +22,7 @@ export default function Contact() {
                         alt="code img"
                     />
                 </div>
-                <form className="bg-white px-4 py-10 shadow-sm rounded-[14px] w-full flex flex-col gap-6">
+                <form className="bg-white px-4 py-10 shadow-md rounded-[14px] w-full flex flex-col gap-6">
                     <div>
                         <p className="font-semibold">Your Name</p>
                         <input type="text" placeholder="Johnson" className="border-1 w-full p-2 rounded-[8px]"/>
