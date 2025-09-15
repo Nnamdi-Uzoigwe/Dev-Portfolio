@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { IoIosSend } from "react-icons/io";
+import contactImg from "../../public/contactimg.png"
 
 export default function Contact() {
     return (
@@ -12,7 +14,14 @@ export default function Contact() {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
-                <p>Hi</p>
+                <div className="">
+                    <Image
+                        src={contactImg}
+                        width={400}
+                        height={400}
+                        alt="code img"
+                    />
+                </div>
                 <form className="bg-white px-4 py-10 shadow-sm rounded-[14px] w-full flex flex-col gap-6">
                     <div>
                         <p className="font-semibold">Your Name</p>

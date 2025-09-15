@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import reactImg from "../../public/react.png"
 import jsImg from "../../public/JS.png"
@@ -15,8 +17,11 @@ import expoImg from "../../public/expo.png"
 import githubImg from "../../public/github.png"
 import vueImg from "../../public/vue.png"
 import shadcnImg from "../../public/shacn.png"
+import { useState } from "react";
 export default function Skills() {
-    
+    const [showOverlay, setShowOverlay] = useState(false);
+
+
 
     const skillData = [
         {
@@ -130,7 +135,7 @@ export default function Skills() {
 
     <div className="flex gap-6 flex-wrap justify-center">
     {skillData.map((item) => (
-        <div key={item.id} className="h-24 w-24 rounded-[10px] shadow-sm bg-white flex items-center justify-center">
+        <div onClick={() => setShowOverlay(true)} key={item.id} className="relative group h-24 w-24 rounded-[10px] shadow-sm bg-white flex items-center justify-center">
           
         <Image 
             src={item.src}
@@ -138,6 +143,10 @@ export default function Skills() {
             width={50}
             alt={item.altText}
             />
+
+            <div className={`absolute inset-0 rounded-[10px] flex items-center justify-center bg-black/70 text-white text-xs lg:text-sm font-medium transition-opacity duration-300 ${showOverlay ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                {item.name}
+            </div>
        </div>
     ))}
     </div>
