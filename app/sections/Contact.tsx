@@ -47,7 +47,7 @@
 
 
 import { IoIosSend } from "react-icons/io";
-import { HiMail, HiUser, HiChatAlt2, HiPhone, HiLocationMarker, HiClock } from "react-icons/hi";
+import { HiMail, HiPhone, HiLocationMarker, HiClock } from "react-icons/hi";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Contact() {
@@ -56,11 +56,11 @@ export default function Contact() {
             {/* Header */}
             <div className="text-center mb-16">
                 <h4 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-                    Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8687e7] to-[#6e70ca]">Connect!</span>
+                    Let&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8687e7] to-[#6e70ca]">Connect!</span>
                 </h4>
                 <p className="text-md text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Ready to collaborate or have a question? I'd love to hear from you. 
-                    <span className="font-medium text-gray-800"> Drop me a message</span> and let's create something amazing together.
+                    Ready to collaborate or have a question? I&apos;d love to hear from you. 
+                    <span className="font-medium text-gray-800"> Drop me a message</span> and let&apos;s create something amazing together.
                 </p>
             </div>
 
@@ -141,10 +141,10 @@ export default function Contact() {
 
                     {/* Additional Info Card */}
                     <div className="bg-gradient-to-r from-[#8687e7] to-[#6e70ca] rounded-3xl p-8 text-white">
-                        <h6 className="text-xl font-bold mb-4">Let's Build Something Great</h6>
+                        <h6 className="text-xl font-bold mb-4">Let&apos;s Build Something Great</h6>
                         <p className="text-white/90 leading-relaxed">
-                            I'm always excited to work on new projects and collaborate with talented individuals. 
-                            Whether it's a web application, mobile app, or innovative idea - let's make it happen!
+                            I&apos;m always excited to work on new projects and collaborate with talented individuals. 
+                            Whether it&apos;s a web application, mobile app, or innovative idea - let&apos;s make it happen!
                         </p>
                     </div>
                 </div>
