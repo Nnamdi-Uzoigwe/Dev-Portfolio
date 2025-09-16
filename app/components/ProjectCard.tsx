@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { TbArrowBigRight } from "react-icons/tb";
 
 interface projectCardProps {
@@ -6,10 +7,11 @@ interface projectCardProps {
     overview: string,
     brief: string,
     tools: string[],
-    image: string
+    image: string,
+    id: string
 }
 
-export const ProjectCard = ({ name, overview, brief, tools, image }:projectCardProps) => {
+export const ProjectCard = ({ id, name, overview, brief, tools, image }:projectCardProps) => {
 
     function truncateWords(text: string, numWords: number) {
     if (!text) return "";
@@ -54,10 +56,12 @@ export const ProjectCard = ({ name, overview, brief, tools, image }:projectCardP
                 <p>{truncateWords(overview, 20)}</p>
 
                 <div className="flex justify-center">
+                  <Link href={`/projects/${id}`}>
                   <button className="mt-4 w-fit bg-[#8687e7] flex items-center hover:bg-[#6e70ca] cursor-pointer gap-2 text-white py-2 px-8 rounded-xl">
                     Read More
                     <TbArrowBigRight />
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

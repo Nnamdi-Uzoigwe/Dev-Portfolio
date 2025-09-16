@@ -71,6 +71,7 @@ export default function Work() {
               overview={item.overview}
               image={item.images[0].url}
               tools={item.tools}
+              id={item.id}
             />
           ))}
         </div>

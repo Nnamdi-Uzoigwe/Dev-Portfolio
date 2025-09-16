@@ -91,6 +91,18 @@ useEffect(() => {
   }
 }, [isOpen]);
 
+ const handleDownloadCV = () => {
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = '/UZOIGWE-NNAMDI-CV.pdf'; // Path to your CV in public folder
+  link.download = 'UZOIGWE-NNAMDI-CV.pdf'; // Name for downloaded file
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  setIsOpen(false);
+};
+
+
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto bg-[#1a1a1aD9] backdrop-blur-md border rounded-[14px] shadow-md border-[#ffffff1A] px-6 py-4">
@@ -115,7 +127,7 @@ useEffect(() => {
               Contact
             </a>
           </div>
-          <button className="hidden lg:flex bg-[#8687e7] text-white px-12 py-2 cursor-pointer hover:bg-[#6e70ca] rounded-[10px]">
+          <button onClick={handleDownloadCV} className="hidden lg:flex bg-[#8687e7] text-white px-12 py-2 cursor-pointer hover:bg-[#6e70ca] rounded-[10px]">
             Download CV
           </button>
           <div onClick={() => setIsOpen(!isOpen)} className="flex lg:hidden bg-[#8687e7] cursor-pointer text-white p-2 rounded-[10px]">
@@ -142,7 +154,7 @@ useEffect(() => {
             <a href="#contact" onClick={() => setIsOpen(false)} className="text-white hover:text-[#8687e7]">
               Contact
             </a>
-            <button onClick={() => setIsOpen(false)} className="bg-[#8687e7] w-full text-white px-12 py-2 cursor-pointer hover:bg-[#6e70ca] rounded-[10px]">
+            <button onClick={handleDownloadCV} className="bg-[#8687e7] w-full text-white px-12 py-2 cursor-pointer hover:bg-[#6e70ca] rounded-[10px]">
               Download CV
             </button>
           </div>

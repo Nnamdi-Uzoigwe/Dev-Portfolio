@@ -45,12 +45,66 @@
 //     )
 // }
 
+"use client";
 
 import { IoIosSend } from "react-icons/io";
 import { HiMail, HiPhone, HiLocationMarker, HiClock } from "react-icons/hi";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Contact() {
+
+    const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xbladjby", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      // Clear status message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }
+  };
+
+
+
     return (
         <div id="contact" className="fade-section bg-gradient-to-br from-gray-50 to-gray-100 py-24 px-6 lg:px-52">
             {/* Header */}
@@ -173,7 +227,7 @@ export default function Contact() {
                             <input 
                                 type="email" 
                                 placeholder="your.email@example.com"
-                                className="w-full p-4 border-2 border-gray-200 rounded-xl outline-0 focus:border-[#8687e7] focus:ring-4 focus:ring-[#8687e7]/10 transition-all duration-300 text-gray-800 placeholder-gray-400 group-hover:border-gray-300"
+                                className="w-full p-4 border-2 border-gray-200 rounded-xl outline-0 transition-all duration-300 text-gray-800 placeholder-gray-400 group-hover:border-gray-300"
                             />
                         </div>
 
