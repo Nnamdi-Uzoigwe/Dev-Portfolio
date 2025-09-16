@@ -49,7 +49,7 @@ export default function Work() {
   }, []);
 
   return (
-    <div id="work" className="py-20 px-6 lg:px-52">
+    <div id="work" className="bg-gray-100 py-20 px-6 lg:px-52">
       <h4 className="font-semibold text-2xl text-center mb-4">
         My <span className="text-[#8687e7]">Portfolio</span>
       </h4>

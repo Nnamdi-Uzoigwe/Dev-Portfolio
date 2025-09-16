@@ -282,7 +282,7 @@ export default function Skills() {
 
     // Create duplicated array for seamless infinite scroll
     const duplicatedSkills = [...skillData, ...skillData];
-
+// shadow-sm bg-white
     return (
         <>
             <style jsx>{`
@@ -304,7 +304,7 @@ export default function Skills() {
                 }
             `}</style>
 
-            <div id="skills" className="fade-section py-20 px-6 lg:px-52 bg-gray-100 flex flex-col items-center">
+            <div id="skills" className="fade-section py-20 px-6 lg:px-52 bg-white flex flex-col items-center">
                 <h4 className="text-2xl font-semibold text-center">
                     My <span className="text-[#8687e7]">Skills</span>
                 </h4>
@@ -326,7 +326,7 @@ export default function Skills() {
                         {duplicatedSkills.map((item, index) => (
                             <div 
                                 key={`${item.id}-${index}`} 
-                                className="relative group h-24 w-24 rounded-[10px] shadow-sm bg-white flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300"
+                                className="relative group h-24 w-24 rounded-[10px]  flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300"
                             >
                                 <Image 
                                     src={item.src}
