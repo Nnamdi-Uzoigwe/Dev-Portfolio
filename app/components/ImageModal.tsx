@@ -1,4 +1,5 @@
 import { X } from "lucide-react";
+import Image from "next/image";
 import { useEffect } from "react";
 
 interface ImageModalProps {
@@ -53,11 +54,12 @@ const ImageModal: React.FC<ImageModalProps> = ({
       </button>
 
       {/* Image container */}
-      <div className="relative z-50 max-w-7xl max-h-full">
-        <img
+      <div className="relative z-50 w-full max-w-7xl h-[90vh]">
+        <Image
           src={imageSrc}
           alt={imageAlt}
-          className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+          fill
+          className="object-contain rounded-lg shadow-2xl"
           onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
         />
       </div>

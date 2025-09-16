@@ -85,8 +85,9 @@ export default function ProjectDetailPage() {
         if (!res.ok) throw new Error("Failed to fetch projects");
         const data = await res.json();
         setProjects(data);
-      } catch (err: any) {
-        console.error(err.message || "Something went wrong");
+      } catch (err: unknown) {
+        const error = err as Error;
+        console.error(error.message || "Something went wrong");
       }
     };
     fetchProjects();

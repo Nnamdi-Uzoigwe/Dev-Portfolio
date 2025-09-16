@@ -214,6 +214,8 @@ export default function Contact() {
                             </label>
                             <input 
                                 type="text" 
+                                value={formData.name}
+                                onChange={handleChange}
                                 placeholder="Enter your full name"
                                 className="w-full p-4 border-2 border-gray-200 rounded-xl outline-0 focus:border-[#8687e7] focus:ring-4 focus:ring-[#8687e7]/10 transition-all duration-300 text-gray-800 placeholder-gray-400 group-hover:border-gray-300"
                             />
@@ -226,6 +228,8 @@ export default function Contact() {
                             </label>
                             <input 
                                 type="email" 
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="your.email@example.com"
                                 className="w-full p-4 border-2 border-gray-200 rounded-xl outline-0 transition-all duration-300 text-gray-800 placeholder-gray-400 group-hover:border-gray-300"
                             />
@@ -238,14 +242,28 @@ export default function Contact() {
                             </label>
                             <textarea 
                                 rows={6}
+                                value={formData.message}
+                                onChange={handleChange}
                                 placeholder="Tell me about your project, ideas, or just say hello..."
                                 className="w-full p-4 border-2 outline-0 border-gray-200 rounded-xl focus:border-[#8687e7] focus:ring-4 focus:ring-[#8687e7]/10 transition-all duration-300 text-gray-800 placeholder-gray-400 resize-none group-hover:border-gray-300"
                             ></textarea>
                         </div>
 
+                          {submitStatus === 'success' && (
+          <div className="mt-4 p-3 bg-green-600 text-white rounded-[8px]">
+            🎉 Message sent successfully! I'll get back to you soon.
+          </div>
+        )}
+        
+        {submitStatus === 'error' && (
+          <div className="mt-4 p-3 bg-red-600 text-white rounded-[8px]">
+            ❌ Failed to send message. Please try again or email me directly.
+          </div>
+        )}
+
                         {/* Submit Button */}
-                        <button className="w-full bg-gradient-to-r from-[#8687e7] to-[#6e70ca] hover:from-[#6e70ca] hover:to-[#5a5cb8] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02]  flex items-center justify-center gap-3 group">
-                            <span className="text-lg">Send Message</span>
+                        <button disabled={isSubmitting} type="button" onClick={handleSubmit} className="w-full bg-gradient-to-r from-[#8687e7] to-[#6e70ca] hover:from-[#6e70ca] hover:to-[#5a5cb8] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02]  flex items-center justify-center gap-3 group">
+                            <span className="text-lg">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                             <IoIosSend className="text-xl group-hover:translate-x-1 transition-transform duration-300" />
                         </button>
                     </form>

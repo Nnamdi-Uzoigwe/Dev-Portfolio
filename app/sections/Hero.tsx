@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { FloatingShapes } from "../components/FloatingShapes";
-import { MdLocationPin, MdOutlineMail } from "react-icons/md";
+import { MdLocationPin } from "react-icons/md";
 import { PiLineVerticalBold } from "react-icons/pi";
 
 export default function Hero() {
