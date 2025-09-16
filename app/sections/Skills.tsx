@@ -318,15 +318,13 @@ export default function Skills() {
                 {/* Marquee Container */}
                 <div className="w-full overflow-hidden">
                     <div 
-                        className="marquee flex gap-8 w-fit"
-                        onMouseEnter={() => setIsPaused(true)}
-                        onMouseLeave={() => setIsPaused(false)}
+                        className="marquee flex gap-2 lg:gap-8 w-fit"
                         style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
                     >
                         {duplicatedSkills.map((item, index) => (
                             <div 
                                 key={`${item.id}-${index}`} 
-                                className="relative group h-24 w-24 rounded-[10px]  flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300"
+                                className="h-24 w-24 flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300"
                             >
                                 <Image 
                                     src={item.src}
@@ -334,10 +332,6 @@ export default function Skills() {
                                     width={50}
                                     alt={item.altText}
                                 />
-
-                                <div className="absolute inset-0 rounded-[10px] flex items-center justify-center bg-black/70 text-white text-xs lg:text-sm font-medium transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                                    {item.name}
-                                </div>
                             </div>
                         ))}
                     </div>
