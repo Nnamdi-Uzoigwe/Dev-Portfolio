@@ -212,7 +212,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Write your name"
-                className="w-full p-4 border-2 border-gray-200 rounded-xl outline-0 focus:border-[#8687e7] transition-all duration-300 text-gray-700 placeholder-gray-400 group-hover:border-gray-300"
+                className="w-full p-2 border-2 border-gray-200 rounded-xl outline-0 focus:border-[#8687e7] transition-all duration-300 text-gray-700 placeholder-gray-400 group-hover:border-gray-300"
               />
             </div>
 
@@ -228,7 +228,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="e.g john@gmail.com"
-                className="w-full p-4 border-2 border-gray-200 rounded-xl outline-0 focus:border-[#8687e7] transition-all duration-300 text-gray-700 placeholder-gray-400 group-hover:border-gray-300"
+                className="w-full p-2 border-2 border-gray-200 rounded-xl outline-0 focus:border-[#8687e7] transition-all duration-300 text-gray-700 placeholder-gray-400 group-hover:border-gray-300"
               />
             </div>
 
@@ -244,7 +244,7 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Leave your message here..."
-                className="w-full p-4 border-2 outline-0 border-gray-200 rounded-xl focus:border-[#8687e7] transition-all duration-300 text-gray-700 placeholder-gray-400 resize-none group-hover:border-gray-300"
+                className="w-full p-2 border-2 outline-0 border-gray-200 rounded-xl focus:border-[#8687e7] transition-all duration-300 text-gray-700 placeholder-gray-400 resize-none group-hover:border-gray-300"
               ></textarea>
             </div>
 
