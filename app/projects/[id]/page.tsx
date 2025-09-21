@@ -124,8 +124,8 @@ export default function ProjectDetailPage() {
 
   return (
     <div className="min-h-screen px-6 lg:px-52">
-      <div className="mt-30 max-w-6xl mx-auto">
-        <Link href="/" className="mb-6 font-semibold items-center flex gap-2">
+      <div className="mt-10 max-w-6xl mx-auto">
+        <Link href="/" className="bg-[#14b8a6] text-white text-sm transition-transform duration-150 active:opacity-80 p-3 w-fit rounded-[10px] mb-6 font-semibold items-center flex gap-2">
           <ArrowLeft />
           <p>Back to Home</p>
         </Link>
