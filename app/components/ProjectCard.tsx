@@ -57,7 +57,7 @@ export const ProjectCard = ({ id, name, overview, brief, tools, image }:projectC
 
                 <div className="flex justify-center">
                   <Link href={`/projects/${id}`}>
-                  <button className="mt-4 w-fit bg-[#8687e7] flex items-center hover:bg-[#6e70ca] cursor-pointer gap-2 text-white py-2 px-8 rounded-xl">
+                  <button className="mt-4 w-fit bg-[#8687e7] flex items-center transition-transform duration-150 active:opacity-80 hover:bg-[#6e70ca] cursor-pointer gap-2 text-white py-2 px-8 rounded-xl">
                     Read More
                     <TbArrowBigRight />
                   </button>

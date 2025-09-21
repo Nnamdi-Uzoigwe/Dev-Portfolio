@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ConditionalNavbar from "./components/ConditionalNavbar";
 
 const poppins = Poppins({
   subsets: ['latin'],       // choose the subsets you need
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className}   antialiased bg-[#fff] text-gray-700`}
       >
-        <Navbar />
+        <ConditionalNavbar />
         {children}
         <Footer />
       </body>

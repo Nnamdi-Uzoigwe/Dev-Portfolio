@@ -79,7 +79,7 @@ export default function Work() {
 
       <div className="mt-18 flex justify-center">
         <Link href="https://github.com/Nnamdi-Uzoigwe" target="_blank">
-          <button className="bg-[#8687e7] hover:bg-[#6e70ca] text-white py-4 cursor-pointer px-12 rounded-[10px]">View More Projects</button>
+          <button className="bg-[#8687e7] hover:bg-[#6e70ca] transition-transform duration-150 active:opacity-80 text-white py-4 cursor-pointer px-12 rounded-[10px]">View More Projects</button>
         </Link>
       </div>
     </div>

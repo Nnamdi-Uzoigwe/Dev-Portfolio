@@ -8,6 +8,7 @@ import {
   ChevronsRight,
   BriefcaseBusiness,
   Clock,
+  ArrowLeft,
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 import { ProjectCard } from "@/app/components/ProjectCard";
@@ -124,6 +125,10 @@ export default function ProjectDetailPage() {
   return (
     <div className="min-h-screen px-6 lg:px-52">
       <div className="mt-30 max-w-6xl mx-auto">
+        <Link href="/" className="mb-6 font-semibold items-center flex gap-2">
+          <ArrowLeft />
+          <p>Back to Home</p>
+        </Link>
         {/* Back Button */}
         <div className="flex gap-2 items-center mb-8">
           <Link

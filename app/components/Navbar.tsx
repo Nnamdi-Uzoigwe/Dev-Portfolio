@@ -127,7 +127,7 @@ useEffect(() => {
               Contact
             </a>
           </div>
-          <button onClick={handleDownloadCV} className="hidden lg:flex bg-[#8687e7] text-white px-12 py-2 cursor-pointer hover:bg-[#6e70ca] rounded-[10px]">
+          <button onClick={handleDownloadCV} className="hidden lg:flex bg-[#8687e7] text-white px-12 py-2 cursor-pointer transition-transform duration-150 active:opacity-80 hover:bg-[#6e70ca] rounded-[10px]">
             Download CV
           </button>
           <div onClick={() => setIsOpen(!isOpen)} className="flex lg:hidden bg-[#8687e7] cursor-pointer text-white p-2 rounded-[10px]">
@@ -154,7 +154,7 @@ useEffect(() => {
             <a href="#contact" onClick={() => setIsOpen(false)} className="text-white hover:text-[#8687e7]">
               Contact
             </a>
-            <button onClick={handleDownloadCV} className="bg-[#8687e7] w-full text-white px-12 py-2 cursor-pointer hover:bg-[#6e70ca] rounded-[10px]">
+            <button onClick={handleDownloadCV} className="bg-[#8687e7] w-full text-white px-12 py-2 cursor-pointer transition-transform duration-150 active:opacity-80 hover:bg-[#6e70ca] rounded-[10px]">
               Download CV
             </button>
           </div>
