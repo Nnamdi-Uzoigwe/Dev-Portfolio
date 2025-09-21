@@ -266,7 +266,7 @@ export default function Contact() {
               disabled={isSubmitting}
               type="button"
               onClick={handleSubmit}
-              className="w-full cursor-pointer bg-gradient-to-r from-[#8687e7] to-[#6e70ca] hover:from-[#6e70ca] hover:to-[#5a5cb8] text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02]  flex items-center justify-center gap-3 group"
+              className="w-full cursor-pointer bg-gradient-to-r from-[#8687e7] to-[#6e70ca] hover:from-[#6e70ca]  hover:to-[#5a5cb8] text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 active:opacity-80 transform hover:scale-[1.02]  flex items-center justify-center gap-3 group"
             >
               <span className="text-lg">
                 {isSubmitting ? "Sending..." : "Send Message"}
