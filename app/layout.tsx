@@ -3,6 +3,8 @@ import { Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import ConditionalNavbar from "./components/ConditionalNavbar";
+import CursorRing from "./components/CursorRing";
+import ScrollToBottom from "./components/ScrollToBottom";
 
 const poppins = Poppins({
   subsets: ['latin'],       // choose the subsets you need
@@ -34,7 +36,9 @@ export default function RootLayout({
         className={`${poppins.className}   antialiased bg-[#fff] text-gray-700`}
       >
         <ConditionalNavbar />
+        <CursorRing />
         {children}
+        <ScrollToBottom />
         <Footer />
       </body>
     </html>

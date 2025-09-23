@@ -72,6 +72,30 @@ body {
 }
 
 
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #8687e7;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease, border-width 0.2s ease,
+    background-color 0.2s ease, transform 0.1s ease-out;
+}
+
+/* Enlarged ring on hover/focus */
+.cursor-ring--hover {
+  width: 80px; /* bigger */
+  height: 80px;
+  border-width: 3px;
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+
 /* 
 deep charcoal - #1a1a1a or #212121
 pure white - #ffffff
