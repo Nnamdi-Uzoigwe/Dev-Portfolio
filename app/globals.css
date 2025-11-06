@@ -95,6 +95,12 @@ body {
   background-color: rgba(52, 152, 219, 0.1);
 }
 
+@media (max-width: 768px) {
+  .cursor-ring {
+    opacity: 0;
+  }
+}
+
 
 /* 
 deep charcoal - #1a1a1a or #212121
